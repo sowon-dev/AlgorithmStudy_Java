@@ -6,6 +6,8 @@ class c1019 {
 
         Scanner sc = new Scanner(System.in);
         String date = sc.next();
+        sc.close();
+
         String[] arr = date.split("\\.");
         int y = Integer.parseInt(arr[0]);
         int m = Integer.parseInt(arr[1]);

@@ -4,6 +4,7 @@ public class c1020 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String jumin = sc.next();
+        sc.close();
 
         // replace사용
         //System.out.println(jumin.replace("-", ""));
