@@ -1,3 +1,5 @@
+package codeup100;
+
 import java.util.Scanner;
 
 public class c1090 {

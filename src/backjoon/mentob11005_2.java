@@ -1,12 +1,9 @@
-package codeup100;
-
+package backjoon;
 import java.util.Scanner;
-
 //멘토님이 풀이해주신 코드. 메서드를 나눠서 각각의 역할을 할 수 있게끔 구현했다.
-
-public class mentob11005-2 {
-	public static void main(String[] args) {
-        new mentob11005-2().solve();
+public class mentob11005_2 {
+    public static void main(String[] args) {
+        new mentob11005_2().solve();
     }
 
     private void solve() {
@@ -47,5 +44,4 @@ public class mentob11005-2 {
         }
         return nBase;
     }
-
 }
