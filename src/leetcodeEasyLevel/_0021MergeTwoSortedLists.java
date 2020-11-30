@@ -1,6 +1,6 @@
 package leetcodeEasyLevel;
 
-public class MergeTwoSortedLists_021 {
+public class _0021MergeTwoSortedLists {
 
     //leetcode 제출
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {

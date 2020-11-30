@@ -2,7 +2,7 @@ package leetcodeEasyLevel;
 
 import java.util.Arrays;
 
-public class TwoSum_001 {
+public class _0001TwoSum {
     public static void main(String[] args) {
         int[] nums;
         int target;

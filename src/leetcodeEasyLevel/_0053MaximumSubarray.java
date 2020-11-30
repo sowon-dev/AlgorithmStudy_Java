@@ -1,6 +1,6 @@
 package leetcodeEasyLevel;
 
-public class MaximumSubarray_053 {
+public class _0053MaximumSubarray {
 
     static int maxSubArray(int[] nums) {
         int result = 0;

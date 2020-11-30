@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-public class ValidParentheses_020 {
+public class _0020ValidParentheses {
     public static void main(String[] args) {
         String s;
         //test cases
