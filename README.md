@@ -3,8 +3,8 @@
 ## 🌊기초
 
 1. [코드업 기초 100제](https://codeup.kr/problemsetsol.php?psid=23)
-1. [leetcode Easy레벨 전체](https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy)
-
+1. [leetcode Top 100 Liked Questions Easy](https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy)
+1. [leetcode Top Interview Questions Easy](https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy)
 
 ## 🌊 Greedy 뽀개기
 1. [해커링크 그리디 Easy부터](https://www.hackerrank.com/domains/algorithms?filters%5Bdifficulty%5D%5B%5D=easy&filters%5Bsubdomains%5D%5B%5D=greedy)
