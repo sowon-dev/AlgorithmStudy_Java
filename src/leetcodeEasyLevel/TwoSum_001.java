@@ -2,14 +2,14 @@ package leetcodeEasyLevel;
 
 import java.util.Arrays;
 
-public class TwoSum {
+public class TwoSum_001 {
     public static void main(String[] args) {
         int[] nums;
         int target;
 
         //test case1
-        nums = new int[]{3, 2, 4};
-        target = 6;
+        //nums = new int[]{3, 2, 4};
+        //target = 6;
 
         //test case2
         nums = new int[]{2, 7, 11, 15};
