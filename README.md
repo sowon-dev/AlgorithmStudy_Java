@@ -3,7 +3,7 @@
 ## 🌊기초
 
 1. [코드업 기초 100제](https://codeup.kr/problemsetsol.php?psid=23)
-1. [leetcode Top Interview Questions Easy](https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy)
+1. [leetcode Top Interview Questions Easy](https://leetcode.com/problemset/top-interview-questions/?difficulty=Easy)
 1. [leetcode Top 100 Liked Questions Easy](https://leetcode.com/problemset/top-100-liked-questions/?difficulty=Easy)
 
 ## 🌊 Greedy 뽀개기
