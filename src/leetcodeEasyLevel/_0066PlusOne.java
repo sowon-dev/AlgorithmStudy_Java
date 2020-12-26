@@ -7,20 +7,28 @@ public class _0066PlusOne {
 
     public static int[] plusOne(int[] digits) {
 
-        digits[digits.length - 1] = digits[digits.length - 1] + 1;
-
-        String tempS = Arrays.toString(digits);
-        String[] temp;
-
-        //System.out.println("temp: "+Arrays.toString(temp)+", temp.length: "+temp.length);
-
-        if(tempS.indexOf(",") == -1){ //한 자리수일때
-            temp = tempS.split("");
-            int[] result = new int[temp.length-2];
-            for (int i = 0; i < result.length; i++) {
-                result[i] = Integer.parseInt(temp[i+1]);
+        //마지막 자리수부터 시작해서 9가 있는 경우 자리수가 +1 증가하고 해당 숫자는 0이 된다
+        //9가 없는 경우 마지막자리수만 +1증가시킨 뒤 break 로 종료
+        int cnt = 0;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            if (digits[i] == 9) {
+                digits[i] = 0;
+                cnt++;
+            } else {
+                digits[i] = digits[i] + 1;
+                break;
             }
-            return result;
+        }
+
+        //자리수가 1증가한 경우 증가한 첫번째 자리는 무조건 1이다.
+        if (cnt == digits.length && digits[0] == 0) { //2
+            int[] tmp = new int[digits.length + 1]; //3
+            tmp[0] = 1;
+
+            for (int i = 0; i < digits.length; i++) {
+                tmp[i + 1] = digits[i];
+            }
+            return tmp;
         }
         return digits;
     }
