@@ -7,27 +7,31 @@ public class _0066PlusOne {
 
     public static int[] plusOne(int[] digits) {
 
-        digits[digits.length-1] = digits[digits.length-1]+1;
-        try {
-            String[] temp = Arrays.toString(digits).split("");
-            int[] result= new int[temp.length];
+        digits[digits.length - 1] = digits[digits.length - 1] + 1;
 
-            for(int i=0; i<temp.length; i++){
-                result[i] = Integer.parseInt(temp[i]);
+        String tempS = Arrays.toString(digits);
+        String[] temp;
+
+        //System.out.println("temp: "+Arrays.toString(temp)+", temp.length: "+temp.length);
+
+        if(tempS.indexOf(",") == -1){ //한 자리수일때
+            temp = tempS.split("");
+            int[] result = new int[temp.length-2];
+            for (int i = 0; i < result.length; i++) {
+                result[i] = Integer.parseInt(temp[i+1]);
             }
-        }catch (NumberFormatException e){
-            e.printStackTrace();
-        }catch ()
-
-        return result;
+            return result;
+        }
+        return digits;
     }
 
     public static void main(String[] args) {
         //int[] digits = {1,2,3};
         //int[] digits = {4,3,2,1};
         //int[] digits = {0};
-        int[] digits = {9};
+        //int[] digits = {9};
+        int[] digits = {9,9};
 
-        System.out.println(plusOne(digits));
+        System.out.println(Arrays.toString(plusOne(digits)));
     }
 }
