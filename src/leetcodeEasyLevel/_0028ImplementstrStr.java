@@ -3,10 +3,14 @@ package leetcodeEasyLevel;
 public class _0028ImplementstrStr {
     public static int strStr(String haystack, String needle) {
 
-        if(haystack.equals("") && needle.equals(""))
+        //풀이1 => 런타임 0ms 메모리 37.5MB
+        if (haystack.equals("") && needle.equals(""))
             return 0;
 
         return haystack.indexOf(needle);
+
+        //풀이2 : 삼항연산자 사용 => 런타임 0ms 메모리 37.8MB
+//		return needle != null && !needle.trim().isEmpty() ? haystack.indexOf(needle) : 0;
 
     }
 
