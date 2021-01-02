@@ -1,7 +1,7 @@
 package leetcodeEasyLevel;
 
 public class _0101SymmetricTree {
-  //https://www.youtube.com/watch?v=3iIpnouY-bg&feature=emb_logo
+  // https://www.youtube.com/watch?v=3iIpnouY-bg&feature=emb_logo
   public static boolean isSymmetric(TreeNode root) {
     return isMirror(root, root);
   }
@@ -15,7 +15,7 @@ public class _0101SymmetricTree {
   }
 
   public static void main(String[] args) {
-    //System.out.println(isSymmetric(new TreeNode()));
+    System.out.println(isSymmetric(new TreeNode()));
   }
 }
 
