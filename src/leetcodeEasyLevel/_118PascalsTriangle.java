@@ -6,31 +6,35 @@ import java.util.List;
 public class _118PascalsTriangle {
 
   public static List<List<Integer>> generate(int numRows) {
-    List<List<Integer>> list = new ArrayList<List<Integer>>();
-    for (int i = 0; i < numRows; i++) {
-      List<Integer> li = new ArrayList<Integer>();
-      if (i == 0) {
-        li.add(1);
-      } else if (i == 1) {
-        li.add(1);
-        li.add(1);
-      } else { //1과 0이 아닌 다른 숫자인 경우
-        List<Integer> lp = list.get(i - 1);
-        for (int k = 0; k < i; k++) {
-          if (k == 0) {
-            li.add(1);
-          } else {
-            li.add(lp.get(k - 1) + lp.get(k));
-          }
+    //만들고싶은 list => List안에 List형태로 구현
+    // [
+    //   [1],
+    //  [1 1],
+    // [1 2 1],
+    //          ]
+
+    List<List<Integer>> triangle = new ArrayList<List<Integer>>();
+    if(numRows == 0) return triangle;
+
+    for(int i = 0; i < numRows; i++){ //0 1 2
+      List<Integer> level = new ArrayList<>(); //리스트 3개만듦
+      for(int j = 0; j<=i; j++){
+        // 각 리스트의 0번째 인덱스는 1을 넣는다.
+        // 마지막 인데스에도 1을 넣는다
+        if(j == 0 || j == i){
+          level.add(1);
+        }else{
+          List<Integer> preRow = triangle.get(i-1); //윗 행의 앞번째 인덱스 값을 가져온다
+          level.add(preRow.get(j) + preRow.get(j-1)); //
         }
-        li.add(1);
+
       }
-      list.add(li);
+      triangle.add(level);
     }
-    return list;
+    return triangle;
   }
 
   public static void main(String[] args) {
-    System.out.println(generate(5));
+    System.out.println(generate(3));
   }
 }
