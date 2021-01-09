@@ -3,7 +3,7 @@ package leetcodeEasyLevel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _118PascalsTriangle {
+public class _0118PascalsTriangle {
 
   public static List<List<Integer>> generate(int numRows) {
     //만들고싶은 list => List안에 List형태로 구현
@@ -25,7 +25,7 @@ public class _118PascalsTriangle {
           level.add(1);
         }else{
           List<Integer> preRow = triangle.get(i-1); //윗 행의 앞번째 인덱스 값을 가져온다
-          level.add(preRow.get(j) + preRow.get(j-1)); //
+          level.add(preRow.get(j) + preRow.get(j-1));
         }
 
       }
