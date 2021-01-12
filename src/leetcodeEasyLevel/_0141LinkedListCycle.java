@@ -1,6 +1,6 @@
-package leetcodeEasyLevel._0141;
+package leetcodeEasyLevel;
 
-public class LinkedListCycle {
+public class _0141LinkedListCycle {
 
   public static boolean hasCycle(ListNode head) {
     //엣지케이스
@@ -23,15 +23,4 @@ public class LinkedListCycle {
     return false;
   }
 
-}
-
-class ListNode {
-
-  int val;
-  ListNode next;
-
-  ListNode(int x) {
-    val = x;
-    next = null;
-  }
 }
