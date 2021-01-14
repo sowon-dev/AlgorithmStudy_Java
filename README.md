@@ -20,3 +20,4 @@
 
 ## 🌊 문제 풀이
 1. [코드업 기초 100제 문제 풀이](https://sowon-dev.github.io/tags/Codeup100/)
+1. [리트코드 easy 레벨 문제 풀이](https://sowon-dev.github.io/tags/Leetcode/)

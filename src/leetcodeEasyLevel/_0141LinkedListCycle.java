@@ -22,5 +22,4 @@ public class _0141LinkedListCycle {
     }
     return false;
   }
-
 }
