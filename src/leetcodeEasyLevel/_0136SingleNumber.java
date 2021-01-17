@@ -7,15 +7,16 @@ import java.util.Set;
 public class _0136SingleNumber {
   public static int singleNumber(int[] nums) {
     //sol1 => Runtime 1 ms Memory 47.9 MB
-    // 비트 연산자(^) : 대응되는 비트가 서로 같으면 0을, 다르면 1을 반환함. (비트 XOR 연산)
+    // 비트 연산자(^) : 대응되는 비트가 서로 같으면 0을, 다르면 1을 반환한 뒤 2진수에서 10진수로 변환하여 출력 (비트 XOR 연산)
     // http://www.tcpschool.com/c/c_operator_bitwise
-  /*
+    // https://www.softwaretestinghelp.com/logical-operators-java/
+    /*
     int val=0;
     for(int i=0;i<nums.length;i++){
       val^=nums[i];
     }
     return val;
- */
+    */
 
     //sol2 => Runtime 10 ms Memory 40 MB
     // HashSet :  contains()을 통해 있으면 remove, 없으면 add해서 남은
@@ -30,11 +31,12 @@ public class _0136SingleNumber {
         }
     }
     return box.stream().findFirst().get();
+
   }
 
   public static void main(String[] args) {
     int[] nums =// {2, 2, 1};
-        //{4,1,2,1,2};
+        //{4,1,2,1,2}; //=>4
         //{1};
         //{-1,-1,-2}; //=> -2
         //{1,3,1,-1,3};
