@@ -2,22 +2,20 @@ package leetcodeEasyLevel;
 
 public class _0172FactorialTrailingZeroes {
   public static int trailingZeroes(int n) {
-    int count =0;
-    int r=0;
-    int sum=0;
-    while(n>0){
-      r=n%10;  //getting remainder
-      sum=(sum*10)+r;
-      n=n/5;
-      count =count+n;
+    //https://www.youtube.com/watch?v=rrrbC6XdLBk&feature=emb_logo
+    int result = 0;
+    while( n > 0 ){
+      n = n/5;
+      result += n;
     }
-    return count;
+    return result;
   }
 
   public static void main(String[] args) {
     int n = //3; //=>0
-           5;//=>1
+          // 5;//=>1
           // 0; //=>0
+          25; //=>6
     System.out.println(trailingZeroes(n));
   }
 }
