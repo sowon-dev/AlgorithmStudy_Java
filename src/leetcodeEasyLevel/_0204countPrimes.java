@@ -4,6 +4,8 @@ public class _0204countPrimes {
 
   //prime numbers 즉 소수를 찾는 문제
   public static int countPrimes(int n) {
+
+    //sol Runtime 13 ms Memory 37.7 MB
     boolean[] nums = new boolean[n];
     int primeCount = 0;
     // 1부터 n까지의 숫자를 true로 초기화한다.
