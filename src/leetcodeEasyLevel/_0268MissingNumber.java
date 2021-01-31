@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _268MissingNumber {
+public class _0268MissingNumber {
   public static int missingNumber(int[] nums) {
     //sol1 : use Arrays.sort()
     //Runtime 4 ms Memory 39.5 MB
