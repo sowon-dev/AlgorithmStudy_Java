@@ -2,10 +2,8 @@ package leetcodeEasyLevel;
 
 public class _0326PowerofThree {
   public static boolean isPowerOfThree(int n) {
-    //3의 배수인지 불리언타입으로 출력하기
-    //sol1. 구글링해도 내 코드가 제일 Runtime빠른듯
+    //sol1. 구글링해도 내 코드가 제일 Runtime빠른듯 대박!
     //Runtime 11 ms Memory 39.3 MB
-    /*
     if(n == 0) return false;
     if(n == 1) return true;
 
@@ -18,14 +16,15 @@ public class _0326PowerofThree {
       }
     }
     return false;
-    */
 
     //sol2 Runtime 22 ms Memory 43.6 MB
+    /*
     if(n == 0) return false;
     while(n % 3 == 0) {
       n/=3;
     }
     return n == 1;
+     */
   }
 
   public static void main(String[] args) {
