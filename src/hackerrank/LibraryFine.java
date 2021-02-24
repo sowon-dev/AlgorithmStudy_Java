@@ -5,7 +5,8 @@ public class LibraryFine {
     // 책반납을 동일년월안에 하루 늦을 경우 매일 15원씩 과금
     // 책반납을 동일년안에 한 달이 늦을 경우 매월 500원씩 과금
     // 책반납을 해당 년을 넘어버린 경우 10000원 과금
-
+    //sol1
+    /*
     if(y1 >= y2 && m1 == m2 && d1 > d2){
       return (d1-d2)*15;
     }else if(y1 == y2 && m1 > m2){
@@ -13,6 +14,12 @@ public class LibraryFine {
     }else if(y1 >= y2){
       return (y1-y2)*10000;
     }
+    return 0;
+ */
+    //sol2
+    if (y1 > y2) { return 10000; }
+    if (m1 > m2 && y1 == y2) { return 500 * (m1 - m2); }
+    if (d1 > d2 && m1 == m2 && y1 == y2) { return 15 * (d1 - d2); }
     return 0;
   }
 
