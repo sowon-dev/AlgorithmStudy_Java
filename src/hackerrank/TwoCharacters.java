@@ -1,24 +1,59 @@
 package hackerrank;
-/*
-The characters present in  are a, b, e, and f.
-This means that  must consist of two of those characters and we must delete two others.
-Our choices for characters to leave are [a,b], [a,e], [a, f], [b, e], [b, f] and [e, f].
-If we delete e and f, the resulting string is babab.
-This is a valid  as there are only two distinct characters (a and b),
-and they are alternating within the string.
-If we delete a and f, the resulting string is bebeeeb.
-This is not a valid string  because there are consecutive e's present.
-Removing them would leave consecutive b's, so this fails to produce a valid string .
-Other cases are solved similarly.
-babab is the longest string we can create.
- */
+
 public class TwoCharacters {
-  static int alternate(String s) {
 
+  public static final int NUM_LETTERS = 26;
 
+  static int alternate(int length, String s) {
+    int maxPattern = 0;
+
+    if(s.length() == 1)//Edge case where length is 1
+    {
+      return maxPattern;
+    }
+
+    /* Create arrays representing the 26^2 subproblems */
+    int[][] pair = new int[NUM_LETTERS][NUM_LETTERS];
+    int[][] count = new int[NUM_LETTERS][NUM_LETTERS];
+
+    for (int i = 0; i < length; i++) {
+      char letter = s.charAt(i);
+      int letterNum = letter - 'a';
+
+      /* Update row */
+      for (int col = 0; col < NUM_LETTERS; col++) {
+        if (pair[letterNum][col] == letter) {
+          count[letterNum][col] = -1;
+        }
+        if (count[letterNum][col] != -1) {
+          pair[letterNum][col] = letter;
+          count[letterNum][col]++;
+        }
+      }
+
+      /* Update column */
+      for (int row = 0; row < NUM_LETTERS; row++) {
+        if (pair[row][letterNum] == letter) {
+          count[row][letterNum] = -1;
+        }
+        if (count[row][letterNum] != -1) {
+          pair[row][letterNum] = letter;
+          count[row][letterNum]++;
+        }
+      }
+    }
+
+    /* Find max in "count" array */
+    for (int row = 0; row < NUM_LETTERS; row++) {
+      for (int col = 0; col < NUM_LETTERS; col++) {
+        maxPattern = Math.max(maxPattern, count[row][col]);
+      }
+    }
+
+    return maxPattern;
   }
 
   public static void main(String[] args) {
-    System.out.println(alternate("beabeefeab")+", ans: 5");
+    System.out.println(alternate(10, "beabeefeab")+", ans: 5");
   }
 }
