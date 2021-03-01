@@ -16,7 +16,7 @@ public class TwoCharacters {
     int[][] pair = new int[NUM_LETTERS][NUM_LETTERS];
     int[][] count = new int[NUM_LETTERS][NUM_LETTERS];
 
-    for (int i = 0; i < length; i++) {
+    for (int i = 0; i < s.length(); i++) {
       char letter = s.charAt(i);
       int letterNum = letter - 'a';
 
