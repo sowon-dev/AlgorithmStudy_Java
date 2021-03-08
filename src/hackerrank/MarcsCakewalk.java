@@ -8,12 +8,13 @@ public class MarcsCakewalk {
     //마크는 칼로리 c만큼인 컵케익 j를 행복하게 먹은 뒤 해당 칼로리를 불태우기위해 2의 j승 * c 마일만큼 걸으려고한다.
     //그가 걸어야 하는 마일수 중 가장 작은 마일수를 리턴하는 문제.
 
-    //int[]는 Collections이 아니므로 Integer[]로 변경
+    // 역순정렬을 하면 가장 작은 마일 수를 얻을 수 있다.
+    // int[]는 Collections 메서드를 사용할 수 없으므로 Integer[]로 변경
     Integer[] caloriesInteger = new Integer[calorie.length];
     for(int i=0; i< calorie.length; i++){
       caloriesInteger[i] = calorie[i];
     }
-    Arrays.sort(caloriesInteger, Collections.reverseOrder());
+    Arrays.sort(caloriesInteger, Collections.reverseOrder()); //역순정렬
     System.out.println(Arrays.toString(caloriesInteger));
     
     //가장 작은 마일수 구하기
