@@ -18,7 +18,7 @@ public class GridChallenge {
     }
 //    System.out.println(Arrays.toString(grid));
 
-    // 2. 열을 사전순 정렬인지 확인하기
+    // 2. 열이 사전순 정렬인지 확인하기
     // 지금 열과 다음 열의 i번째를 비교하여 사전순이 아니면 NO를 출력
     for (int i = 0; i < grid[0].length(); i++) {
       for (int j = 0; j < grid.length - 1; j++) {
@@ -28,7 +28,6 @@ public class GridChallenge {
         }
       }
     }
-
     return "YES";
   }
 
@@ -40,6 +39,5 @@ public class GridChallenge {
 //    System.out.println(gridChallenge(new String[]{"ppp", "ypp", "wyw"}) + ", ans:YES");
 //    System.out.println(gridChallenge(new String[]{"eibjbwsp", "ptfxehaq", "jxipvfga", "rkefiyub", "nflvjznh"}) + ", ans:NO");
 //    System.out.println(gridChallenge(new String[]{"kalwfhfj", "lktajiaq", "srdgoros"}) + ", ans:YES");
-
   }
 }
