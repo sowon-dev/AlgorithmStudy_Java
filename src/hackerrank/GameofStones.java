@@ -23,7 +23,5 @@ public class GameofStones {
     System.out.println(gameOfStones(10)+", ans: First"); //1.428...
     System.out.println(gameOfStones(13)+", ans: First"); //1.857...
     System.out.println(gameOfStones(14)+", ans: Second"); //2
-
-
   }
 }
