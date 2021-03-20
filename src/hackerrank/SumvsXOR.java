@@ -1,4 +1,4 @@
-package leetcodeEasyLevel;
+package hackerrank;
 
 public class SumvsXOR {
 
