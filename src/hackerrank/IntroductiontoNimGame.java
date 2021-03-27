@@ -8,12 +8,12 @@ public class IntroductiontoNimGame {
     // 차례가 올때마다 돌 1개이상을 돌무덤에서 제거한다.
     // 마지막 돌을 제거하는 참가자가 승리한다.
 
-    // XOR란 이진법으로 두 요소가 같으면 0, 다르면 1를 출력한다.
-    int nim_sum = 0;
+    // XOR 연산자는 이진수로 두 요소가 같으면 0, 다르면 1를 출력한다.
+    int xor = 0;
     for(int i=0; i<pile.length; i++){
-      nim_sum = nim_sum ^ pile[i];
+      xor = xor ^ pile[i];
     }
-    if(nim_sum == 0) return "Second";
+    if(xor == 0) return "Second";
     return "First";
   }
 
