@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 public class _1065 {
 
   public static void main(String[] args) throws IOException {
-    //memory 11488 run 80
+    //memory 11496 run 84
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int n = Integer.parseInt(br.readLine());
     int cnt;
@@ -22,25 +22,25 @@ public class _1065 {
       System.out.println(n);
     }else{
       cnt = 99;
-      for(int i=100; i<=n; ++i){
-        cnt += checkHanNumber(i);
+      for(int i=100; i<=n; i++){
+        int hundreds = i / 100 % 10;
+        int tens = i / 10 % 10;
+        int units = i % 10;
+        
+        // 등차수열인지 확인하기
+        if ((hundreds - tens) == (tens - units)) {
+          cnt++;
+        }
+        
       }
-      if (n == 1000) cnt--;
+      // 엣지케이스
+      if (n == 1000){
+        cnt--;
+      }
+
       System.out.println(cnt);
     }
 
-  }
-
-  private static int checkHanNumber(int num) {
-    int hundreds = num / 100 % 10;
-    int tens = num / 10 % 10;
-    int units = num % 10;
-
-    // 등차인지 확인하기. 등차일때만 cnt를 1 증가
-    if(tens * 2 == hundreds + units){
-      return 1;
-    }
-    return 0;
   }
 }
 /*
