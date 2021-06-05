@@ -1,5 +1,6 @@
 package backjoon;
-
+// https://www.acmicpc.net/problem/1018
+// 체스판 다시 칠하기
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +12,7 @@ public class _1018 {
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    // memory 11484 runtime 88
+    // memory 11840 runtime 84
     StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
     int N = Integer.parseInt(st.nextToken());
@@ -27,7 +28,7 @@ public class _1018 {
         // 흰색일때 true
         if (str.charAt(j) == 'W') {
           arr[i][j] = true;
-        } 
+        }
         // 검정색일때 false
         else {
           arr[i][j] = false;
