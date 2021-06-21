@@ -14,13 +14,28 @@ public class _15652 {
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     StringTokenizer st = new StringTokenizer(br.readLine());
-    // memory 111924 runtime 372
+    // memory 13464 runtime 92
     N = Integer.parseInt(st.nextToken());
     M = Integer.parseInt(st.nextToken());
+    arr = new int[M];
+    dfs(1,0);
+    System.out.println(sb);
+  }
 
+  static void dfs(int current, int depth){
 
+    if(depth == M){
+      for(int v : arr){
+        sb.append(v).append(" ");
+      }
+      sb.append("\n");
+      return;
+    }
 
-
+    for(int i=current; i<=N; i++){
+      arr[depth] = i;
+      dfs(i, depth+1);
+    }
   }
 }
 /*
