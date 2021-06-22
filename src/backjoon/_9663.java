@@ -12,6 +12,7 @@ public class _9663 {
   public static int count = 0;
 
   public static void main(String[] args) throws IOException {
+    // memory 12052 runtime 5728
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     N = Integer.parseInt(br.readLine());
     arr = new int[N];
